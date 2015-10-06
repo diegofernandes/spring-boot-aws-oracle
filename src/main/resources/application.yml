@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  contextPath:
+spring:
+  datasource:
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: ***
+    username: ***
+    password: ***
+
+
+cloud:
+    aws:
+      credentials:
+        accessKey: ***
+        secretKey: ***
+        instanceProfile: true
+      region:
+        static: sa-east-1
+
+estoque:
+  worker: ORACLE
+  sqs:
+    get:
+      req: estoque-get-request
+      res: estoque-get-response
